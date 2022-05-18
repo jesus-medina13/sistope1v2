@@ -121,6 +121,12 @@ void main(int argc, char ** argv){
     for (int i = 0; i < canDiscos; ++i)
     {
     	pid = fork();
+
+		if (pid > 0){
+			
+			break;
+		}
+
     }
     if (pid > 0)
     {
@@ -131,4 +137,5 @@ void main(int argc, char ** argv){
     else{
     	printf("error\n");
     }
+	return;
 }
